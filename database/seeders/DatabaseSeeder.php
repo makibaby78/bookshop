@@ -15,10 +15,21 @@ class DatabaseSeeder extends Seeder
     {
         // User::factory(10)->withPersonalTeam()->create();
 
-        User::factory()->withPersonalTeam()->create([
-            'firstname' => 'Test',
-            'lastname' => 'User',
-            'email' => 'test@example.com',
+        User::factory()->withPersonalTeam()->createMany([
+            [
+                'firstname' => 'Max Loued',
+                'lastname' => 'Baisac',
+                'is_admin' => true,
+                'email' => 'mbaisac@bookshop.com',
+                'password' => '123456789',
+            ],
+            [
+                'firstname' => 'Stephanie May',
+                'lastname' => 'Montera',
+                'is_admin' => false,
+                'email' => 'smontera@bookshop.com',
+                'password' => '123456789',
+            ],
         ]);
     }
 }
